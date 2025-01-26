@@ -278,19 +278,21 @@ production stylesheet in assets/built/screen.css
     z-index: 150;
 }
 
+/* menu on post pages */
 .has-cover:not(.home-template) .gh-head {
     background-color: var(--ghost-accent-color);
     color: #fff;
 }
 
+/* menu on main, but not post pages */
 :is(.home-template, .paged:not(.tag-template):not(.author-template)).has-cover .gh-head {
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
     z-index: 2000;
-    background-color: transparent;
-    color: #fff;
+    background-color: var(--ghost-accent-color); /*    background-color: transparent; */
+    color: #fff
 }
 
 .gh-head a {
